@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Oct 14 14:16:24 2017
+
+@author: rishi
+"""
+
+import random
+ 
+n = random.randrange(1, 101)
+print('I\'ve thought a number between 1 and 100!')
+ 
+while True:
+    try:
+        g = input('Guess the number!!!!')
+        g = int(g)
+        if not 100 > g > 0:
+            print('It\'s in between 0 and 100!')
+    except ValueError:
+        print('Enter an integer value')
+        continue
+ 
+    if g == n:
+        print('Congratulations!!!!! You did it :)')
+        break
+ 
+    if g < n:
+        print('Number is Larger than the current number')
+ 
+    if g > n:
+        print('Number is Smaller than the current number')
